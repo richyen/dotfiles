@@ -408,6 +408,8 @@ if (has("gui_running") || g:solarized_termtrans == 0)
     let s:back        = s:base03
 else
     let s:back        = "NONE"
+" Modification by richyen so that text files are more readable
+		let s:base0       = s:base2
 endif
 "}}}
 " Alternate light scheme "{{{
