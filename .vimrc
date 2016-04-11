@@ -21,7 +21,7 @@ set encoding=utf-8 nobomb
 let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
-set noeol
+" set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -46,6 +46,8 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+" Auto-indentation to two spaces
+set shiftwidth=2
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list
@@ -76,6 +78,8 @@ set title
 set showmatch
 " Show the (partial) command as it’s being typed
 set showcmd
+" Always use spaces instead of tabs
+set expandtab
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
