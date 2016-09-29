@@ -139,3 +139,8 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# richyen edits
+alias yp="echo ${YUMPASSWORD}"
+alias ec2="ssh ec2-user@${1}"
+alias bp="vim ~/.bash_profile"
