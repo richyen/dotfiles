@@ -42,7 +42,7 @@ brew install gnupg
 brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
-brew install screen
+brew install tmux
 brew install php
 brew install gmp
 
