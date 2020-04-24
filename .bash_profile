@@ -52,6 +52,14 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Set history timestamp format
 export HISTTIMEFORMAT="%Y-%m-%d %T "
 
+# Add ssh key when opening terminal for the first time
+ssh-add -T ${HOME}/.ssh/id_rsa.pub
+
+if [ $? -ne 0 ]
+then
+  ssh-add -k
+fi
+
 # Load up Docker shortcuts
 . ${HOME}/Code/edb/ppas_and_docker/docker_functions
 
