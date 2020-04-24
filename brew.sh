@@ -84,20 +84,22 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install gs
+brew install helm
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
 brew install p7zip
 brew install pigz
+brew install pstree
 brew install pv
 brew install rename
 brew install rlwrap
 brew install ssh-copy-id
+brew install speedtest-cli
 brew install tree
 brew install vbindiff
+brew install wget
 brew install zopfli
-brew install helm
-brew install tree
 
 # Remove outdated versions from the cellar.
 brew cleanup
