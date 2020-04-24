@@ -51,3 +51,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Set history timestamp format
 export HISTTIMEFORMAT="%Y-%m-%d %T "
+
+# Load up Docker shortcuts
+. ${HOME}/Code/edb/ppas_and_docker/docker_functions
+
+# Ingest environment variables
+source ~/.exports_local
