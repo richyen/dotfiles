@@ -80,7 +80,7 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
+brew install docker
 brew install git
 brew install git-lfs
 brew install gs
@@ -101,5 +101,15 @@ brew install vbindiff
 brew install wget
 brew install zopfli
 
+# Install casks
+brew cask install amazon-music
+#brew cask install docker
+brew cask install evernote
+brew cask install google-chrome
+#brew cask install slack
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install wechat
+#brew cask install zoomus
 # Remove outdated versions from the cellar.
 brew cleanup
