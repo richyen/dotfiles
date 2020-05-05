@@ -106,6 +106,7 @@ brew cask install amazon-music
 brew cask install docker
 brew cask install evernote
 brew cask install google-chrome
+brew cask install osxfuse
 brew cask install slack
 brew cask install vagrant
 brew cask install virtualbox
