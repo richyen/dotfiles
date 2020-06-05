@@ -9,9 +9,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
+alias d="cd ~/Desktop"
 alias g="git"
 
 # Detect which `ls` flavor is in use
@@ -130,7 +129,7 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
+alias mute="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
 
 # Kill all the tabs in Chrome to free up memory
@@ -145,8 +144,13 @@ alias reload="exec $SHELL -l"
 
 # richyen edits
 alias yp="echo ${YUMPASSWORD}"
-alias ec2="ssh ec2-user@${1}"
 alias bp="vim ~/.bash_profile"
+alias di="docker images"
+alias dx="docker exec"
+alias dr="docker run -it -v ${PWD}:/docker"
+alias dspf="docker system prune -f"
+alias dvpf="docker volume prune -f"
+alias com="docker-compose"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
