@@ -62,6 +62,3 @@ if [ $? -ne 0 ]
 then
   ssh-add -k
 fi
-
-# Load up Docker shortcuts
-. ${HOME}/Code/edb/ppas_and_docker/docker_functions
