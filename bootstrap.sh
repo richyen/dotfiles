@@ -7,10 +7,15 @@ git pull origin master;
 function doIt() {
   cp .functions ~
   cp .aliases ~
+
+  cat <<__EOF__ > ~/.bashrc
+[ -n "\$PS1" ] && source ~/.bash_profile;
+__EOF__
+
   cat <<__EOF__ > ~/.bash_profile
-source ~/.exports_local" >> ~/.bash_profile
+source ~/.exports_local >> ~/.bash_profile
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "\$file" ] && [ -f "\$file" ] && source "\$file";
 done;
 unset file;
 __EOF__
