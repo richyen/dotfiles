@@ -5,15 +5,15 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-  cp .functions ~
-  cp .aliases ~
-  cat <<__EOF__ > ~/.bash_profile
-source ~/.exports_local" >> ~/.bash_profile
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-__EOF__
+  rsync --exclude ".git/" \
+        --exclude ".DS_Store" \
+        --exclude ".osx" \
+        --exclude "bootstrap.sh" \
+        --exclude "bootstrap_mac.sh" \
+        --exclude "README.md" \
+        --exclude "LICENSE-MIT.txt" \
+        --exclude "init" \
+        -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 
