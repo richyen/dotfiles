@@ -7,6 +7,7 @@ git pull origin master;
 function doIt() {
   cp .functions ~
   cp .aliases ~
+  cp .gitconfig ~
 
   cat <<__EOF__ > ~/.bashrc
 [ -n "\$PS1" ] && source ~/.bash_profile;
