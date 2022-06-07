@@ -52,6 +52,7 @@ __EOF__
   source ~/.bash_profile;
   installDocker
   installPython
+  sudo mkdir -p /opt/EDB # Custom symlink
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
