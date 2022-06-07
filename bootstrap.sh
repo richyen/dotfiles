@@ -11,6 +11,7 @@ function installPython() {
 
   wget https://bootstrap.pypa.io/get-pip.py
   sudo python3.8 get-pip.py
+  pip install psycopg2-binary
   rm get-pip.py
 }
 
