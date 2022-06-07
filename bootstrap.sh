@@ -37,4 +37,4 @@ unset doIt;
 echo "Done.  You may also need to do the following:"
 echo "  - Install Docker (https://docs.docker.com/engine/install/ubuntu/)"
 echo "  - Set passwordless sudo"
-echo "  - Clone any internal repos
+echo "  - Clone any internal repos"
