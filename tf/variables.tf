@@ -1,4 +1,22 @@
-variable "service_ports" {}
+variable "service_ports" {
+  type        = list(object({
+    description  = string
+    port         = number
+    protocol     = string
+  }))
+  default     = [
+    {
+      description = "SSH"
+      port        = 22
+      protocol    = "tcp"
+    },
+    {
+      description = "EPAS"
+      port        = 5444
+      protocol    = "tcp"
+    }]
+}
+
 variable "ssh_user" {
   type        = string
   default     = "ubuntu"
