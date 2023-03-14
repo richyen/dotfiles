@@ -8,7 +8,7 @@ terraform {
 }
 
 locals {
-  cluster_name      = "${terraform.workspace}_packer"
+  cluster_name      = terraform.workspace
 }
 
 resource "aws_security_group" "rules" {
