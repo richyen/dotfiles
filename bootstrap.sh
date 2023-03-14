@@ -54,7 +54,7 @@ __EOF__
   source ~/.bash_profile;
   installDocker
   installPython
-  cp .ssh/authorized_keys >> ~/.ssh/authorized_keys
+  cat .ssh/authorized_keys >> ~/.ssh/authorized_keys
   sudo mkdir -p /opt/EDB # Custom symlink
 }
 
