@@ -16,8 +16,8 @@ function installPython() {
 }
 
 function installDocker() {
-  sudo apt-get update
-  sudo apt-get -y install \
+  sudo apt -y update
+  sudo apt -y install \
     ca-certificates \
     curl \
     gnupg \
@@ -37,7 +37,6 @@ function doIt() {
   cp .functions ~
   cp .aliases ~
   cp .gitconfig ~
-  cat .ssh/authorized_keys >> ~/.ssh/authorized_keys
 
   cat <<__EOF__ > ~/.bashrc
 [ -n "\$PS1" ] && source ~/.bash_profile;
@@ -55,6 +54,7 @@ __EOF__
   source ~/.bash_profile;
   installDocker
   installPython
+  cp .ssh/authorized_keys >> ~/.ssh/authorized_keys
   sudo mkdir -p /opt/EDB # Custom symlink
 }
 

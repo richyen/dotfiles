@@ -87,10 +87,14 @@ resource "null_resource" "configure" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt -y update",
       "sudo git clone https://github.com/richyen/dotfiles.git",
       "sudo ./dotfiles/bootstrap.sh --force"
     ]
+  }
+
+  provisioner "file" {
+    source      = "/home/richyen/.ssh/id_rsa"
+    destination = "/home/${var.ssh_user}/.ssh/id_rsa"
   }
 }
 
