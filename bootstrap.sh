@@ -30,7 +30,26 @@ function installDocker() {
   sudo apt -y update
   sudo apt -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
   sudo usermod -aG docker ubuntu
+}
 
+function installPackages() {
+  sudo apt -y update
+  sudo apt -y install net-tools awscli
+}
+
+function installTerraform() {
+  sudo apt-get -y update && sudo apt-get install -y gnupg software-properties-common
+  wget -O- https://apt.releases.hashicorp.com/gpg | \
+    gpg --dearmor | \
+    sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  gpg --no-default-keyring \
+    --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+    --fingerprint
+  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/hashicorp.list
+  sudo apt -y update
+  sudo apt-get -y install terraform
 }
 
 function doIt() {
@@ -52,8 +71,10 @@ unset file;
 export PATH="/opt/EDB/TPA/bin:$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 __EOF__
   source ~/.bash_profile;
+  installPackages
   installDocker
   installPython
+  installTerraform
   cat .ssh/authorized_keys >> ~/.ssh/authorized_keys
   sudo mkdir -p /opt/EDB # Custom symlink
 }
