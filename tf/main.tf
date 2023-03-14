@@ -46,20 +46,15 @@ resource "tls_private_key" "aws_ec2" {
   rsa_bits  = 4096
 }
 
-data "tls_public_key" "private_key_pem" {
-  private_key_pem = tls_private_key.aws_ec2.private_key_pem
+resource "local_file" "private_key" {
+  content         = tls_private_key.aws_ec2.private_key_pem
+  filename        = "aws_ec2.pem"
+  file_permission = "0600"
 }
 
 resource "aws_key_pair" "key_pair" {
   public_key = tls_private_key.aws_ec2.public_key_openssh
-
   key_name = var.key_name
-  provisioner "local-exec" {
-    command = <<-EOT
-      echo '${tls_private_key.aws_ec2.private_key_pem}' > ./aws_ec2.pem
-      chmod 0600 ./aws_ec2.pem
-    EOT
-  }
 }
 
 data "aws_subnet" "selected" {
@@ -85,7 +80,7 @@ resource "null_resource" "configure" {
   connection {
     user = "ubuntu"
     host = aws_instance.machine.public_ip
-    private_key="${file("./aws_ec2.pem")}"
+    private_key="${file(local_file.private_key.filename)}"
     agent = true
     timeout = "3m"
   }
