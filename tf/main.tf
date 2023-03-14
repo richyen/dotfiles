@@ -96,6 +96,11 @@ resource "null_resource" "configure" {
     source      = "/home/richyen/.ssh/id_rsa"
     destination = "/home/${var.ssh_user}/.ssh/"
   }
+
+  provisioner "file" {
+    source      = "/home/richyen/.exports_local"
+    destination = "/home/${var.ssh_user}/"
+  }
 }
 
 resource "local_file" "servers_yml" {
