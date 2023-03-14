@@ -5,6 +5,15 @@ function nas() {
   ssh -p${NAS_SSH_PORT} richyen@${NAS_HOST}
 }
 
+# Clone a git repo
+function egc() {
+  if [[ "x${1}" == 'x' ]]; then
+    echo "missing repository name"
+  else
+    git clone git@github.com:EnterpriseDB/${1}.git
+  fi
+}
+
 # Pull a Docker container from registry and tag it without the registry URL
 function dp() {
   IMG_OS="centos7"
