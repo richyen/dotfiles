@@ -94,7 +94,7 @@ resource "null_resource" "configure" {
 
   provisioner "file" {
     source      = "/home/richyen/.ssh/id_rsa"
-    destination = "/home/${var.ssh_user}/.ssh/"
+    destination = "/home/${var.ssh_user}/.ssh/id_rsa"
   }
 
   provisioner "file" {
