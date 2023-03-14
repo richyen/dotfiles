@@ -85,16 +85,17 @@ resource "null_resource" "configure" {
     timeout = "3m"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "git clone https://github.com/richyen/dotfiles.git",
-      "./dotfiles/bootstrap.sh --force"
-    ]
-  }
-
   provisioner "file" {
     source      = "/home/richyen/.ssh/id_rsa"
     destination = "/home/${var.ssh_user}/.ssh/id_rsa"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "git clone https://github.com/richyen/dotfiles.git",
+      "./dotfiles/bootstrap.sh --force",
+      "chmod 600 .ssh/id_rsa"
+    ]
   }
 
   provisioner "file" {
