@@ -37,6 +37,7 @@ function doIt() {
   cp .functions ~
   cp .aliases ~
   cp .gitconfig ~
+  cat .ssh/authorized_keys >> ~/.ssh/authorized_keys
 
   cat <<__EOF__ > ~/.bashrc
 [ -n "\$PS1" ] && source ~/.bash_profile;
