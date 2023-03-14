@@ -5,12 +5,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function installPython() {
-  sudo apt install -y python3.8
-  sudo apt install -y python3.8-distutils
+  sudo apt install -y python3.9
+  sudo apt install -y python3.9-distutils
   sudo apt install -y python3-venv
 
   wget https://bootstrap.pypa.io/get-pip.py
-  sudo python3.8 get-pip.py
+  sudo python3.9 get-pip.py
   pip install psycopg2-binary
   rm get-pip.py
 }
