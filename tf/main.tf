@@ -99,7 +99,7 @@ resource "null_resource" "configure" {
 
   provisioner "file" {
     source      = "/home/richyen/.exports_local"
-    destination = "/home/${var.ssh_user}/"
+    destination = "/home/${var.ssh_user}/.exports_local"
   }
 }
 
