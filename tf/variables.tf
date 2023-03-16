@@ -11,6 +11,21 @@ variable "service_ports" {
       protocol    = "tcp"
     },
     {
+      description = "react"
+      port        = 3000
+      protocol    = "tcp"
+    },
+    {
+      description = "fastapi"
+      port        = 5000
+      protocol    = "tcp"
+    },
+    {
+      description = "proxy"
+      port        = 8080
+      protocol    = "tcp"
+    },
+    {
       description = "EPAS"
       port        = 5444
       protocol    = "tcp"
