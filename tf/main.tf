@@ -70,6 +70,11 @@ resource "aws_instance" "machine" {
   subnet_id              = data.aws_subnet.selected.id
   vpc_security_group_ids = [aws_security_group.rules.id]
 
+  root_block_device {
+    volume_type = "gp2"
+    volume_size = 50
+  }
+
   tags = {
     Name       = local.cluster_name
     Created_By = var.created_by
