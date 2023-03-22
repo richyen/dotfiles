@@ -58,6 +58,9 @@ function doIt() {
   cp .functions ~
   cp .aliases ~
   cp .gitconfig ~
+  cp .vimrc ~
+  mkdir -p ~/.vim/backups
+  mkdir -p ~/.vim/swaps
 
   cat <<__EOF__ > ~/.bashrc
 [ -n "\$PS1" ] && source ~/.bash_profile;
