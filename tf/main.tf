@@ -12,7 +12,15 @@ terraform {
 }
 
 locals {
-  cluster_name      = terraform.workspace
+  cluster_name = terraform.workspace
+}
+
+terraform {
+  backend "s3" {
+    bucket = "richyen-dev"
+    key    = "richyen-dev-tfstate"
+    region = "us-west-1"
+  }
 }
 
 resource "aws_security_group" "rules" {
