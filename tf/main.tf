@@ -135,3 +135,7 @@ servers:
     public_dns: ${aws_instance.machine.public_dns}
 EOT
 }
+
+output "ec2_public_ip" {
+  value = aws_instance.machine.public_ip
+}
