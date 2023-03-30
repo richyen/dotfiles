@@ -35,7 +35,7 @@ function installDocker() {
 function installPackages() {
   sudo sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
   sudo apt -y update
-  sudo apt -y install net-tools awscli
+  sudo apt -y install net-tools awscli zip
   sudo snap install go --classic
 }
 
