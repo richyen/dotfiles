@@ -12,10 +12,3 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-# Terraform artifacts
-tf/.terraform/
-*.pem
-tf/servers.yml
-*.tfstate*
-**/.terraform.lock.hcl
