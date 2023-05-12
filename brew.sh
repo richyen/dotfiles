@@ -102,15 +102,15 @@ brew install wget
 brew install zopfli
 
 # Install casks
-brew cask install amazon-music
-brew cask install docker
-brew cask install evernote
-brew cask install google-chrome
-brew cask install osxfuse
-brew cask install slack
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install wechat
-brew cask install zoomus
+brew install --cask amazon-music
+brew install --cask docker
+brew install --cask evernote
+brew install --cask google-chrome
+brew install --cask osxfuse
+brew install --cask slack
+brew install --cask vagrant
+brew install --cask virtualbox
+brew install --cask wechat
+brew install --cask zoomus
 # Remove outdated versions from the cellar.
 brew cleanup
