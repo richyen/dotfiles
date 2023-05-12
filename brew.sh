@@ -103,6 +103,7 @@ brew install zopfli
 
 # Install casks
 brew install --cask amazon-music
+brew install --cask pandora
 brew install --cask docker
 brew install --cask evernote
 brew install --cask google-chrome
@@ -111,6 +112,6 @@ brew install --cask slack
 brew install --cask vagrant
 brew install --cask virtualbox
 brew install --cask wechat
-brew install --cask zoomus
+brew install --cask zoom
 # Remove outdated versions from the cellar.
 brew cleanup
