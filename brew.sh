@@ -81,11 +81,13 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 brew install docker
+brew install exiftool
 brew install git
 brew install git-lfs
 brew install gs
 brew install helm
 brew install imagemagick --with-webp
+brew install jq
 brew install lua
 brew install lynx
 brew install p7zip
@@ -108,6 +110,7 @@ brew install --cask docker
 brew install --cask evernote
 brew install --cask google-chrome
 brew install --cask osxfuse
+brew install --cask skitch
 brew install --cask slack
 brew install --cask vagrant
 brew install --cask virtualbox
