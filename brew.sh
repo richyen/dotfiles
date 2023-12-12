@@ -107,7 +107,8 @@ brew install zopfli
 brew install --cask amazon-music
 brew install --cask pandora
 brew install --cask docker
-brew install --cask evernote
+brew install --cask joplin
+brew install --cask notion
 brew install --cask google-chrome
 brew install --cask osxfuse
 brew install --cask skitch
