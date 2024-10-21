@@ -80,7 +80,6 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-brew install docker
 brew install exiftool
 brew install git
 brew install git-lfs
