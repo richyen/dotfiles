@@ -80,7 +80,6 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-brew install docker
 brew install exiftool
 brew install git
 brew install git-lfs
@@ -113,8 +112,10 @@ brew install --cask google-chrome
 brew install --cask osxfuse
 brew install --cask skitch
 brew install --cask slack
+brew install --cask ultimaker-cura
 brew install --cask vagrant
 brew install --cask virtualbox
+brew install --cask visual-studio-code
 brew install --cask wechat
 brew install --cask zoom
 # Remove outdated versions from the cellar.
